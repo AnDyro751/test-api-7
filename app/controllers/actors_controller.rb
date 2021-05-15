@@ -4,6 +4,7 @@ class ActorsController < ApplicationController
 
   def index
     @actors = Actor.all.order(:events_count => :desc)
+    render formats: [:json], locals: {actors: @actors}
   end
 
   def update
