@@ -1,0 +1,1 @@
+json.(repository, :id, :name, :url)

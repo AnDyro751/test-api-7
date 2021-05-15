@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :events
-  delete "/erase", to: "events#erase_all"
+  namespace :events do
+    get '/actors/:id', to: 'actors#events_actors'
+  end
+
+  delete '/erase', to: 'events#erase_all'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
