@@ -2,6 +2,10 @@ class ActorsController < ApplicationController
   before_action :set_actor, only: [:events_actors]
   before_action :set_event, only: [:update]
 
+  def index
+    @actors = Actor.all
+  end
+
   def update
     @event.update_attribute(avatar_url: params['avatar_url'])
   end
