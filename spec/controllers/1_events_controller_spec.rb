@@ -951,19 +951,19 @@ RSpec.describe "EventsControllerSpec", :type => :request do
 
   it 'findAllEventsByNonExistingActorId' do
 
-   # {
-   #      "comment": "Find all the events by actor id 7",
-   #      "test_comment": "It tests finding an event by non-existing actor id",
-   #      "test_name": "findAllEventsByNonExistingActorId",
-   #      "test_class": "EventsControllerSpec",
-   #      "test_priority": 1,
-   #      "endpoint": "/events/actors/7",
-   #      "method": "GET",
-   #      "headers": {},
-   #      "body": {},
-   #      "response": "",
-   #      "response_code": 404
-   #  }
+    # {
+    #      "comment": "Find all the events by actor id 7",
+    #      "test_comment": "It tests finding an event by non-existing actor id",
+    #      "test_name": "findAllEventsByNonExistingActorId",
+    #      "test_class": "EventsControllerSpec",
+    #      "test_priority": 1,
+    #      "endpoint": "/events/actors/7",
+    #      "method": "GET",
+    #      "headers": {},
+    #      "body": {},
+    #      "response": "",
+    #      "response_code": 404
+    #  }
 
     resp = {}
     get '/events/actors/7'
