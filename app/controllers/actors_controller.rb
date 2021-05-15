@@ -3,8 +3,8 @@ class ActorsController < ApplicationController
   before_action :set_event, only: [:update]
 
   def index
-    @actors = Actor.all.order(:events_count => :desc)
-    render formats: [:json], locals: {actors: @actors}
+    @actors = Actor.all.order(:events_count => :desc, :created_at => :desc, :login => :desc)
+    render formats: [:json], status: :ok, locals: {actors: @actors}
   end
 
   def update
