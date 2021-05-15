@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'rails_helper'
 require 'rspec/rails'
-RSpec.describe 'EventsControllerSpec', type: :request do
+RSpec.describe "EventsControllerSpec", :type => :request do
 
   it 'createEvent' do
 
@@ -35,7 +35,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 1, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 06:12:46' }
+    params = { "id": 1, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 06:12:46" }
 
     post '/events', params, format: :json
     expect(response.status).to eq 201
@@ -70,7 +70,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 2, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-28 06:24:37' }
+    params = { "id": 2, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-28 06:24:37" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -104,7 +104,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 3, "type": 'PushEvent', "actor": { "id": 3, "login": 'jade33', "avatar_url": 'https://avatars.com/jade33' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 22:31:59' }
+    params = { "id": 3, "type": "PushEvent", "actor": { "id": 3, "login": "jade33", "avatar_url": "https://avatars.com/jade33" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 22:31:59" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -138,7 +138,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 4, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 03:38:10' }
+    params = { "id": 4, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 03:38:10" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -172,7 +172,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 5, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 12:52:48' }
+    params = { "id": 5, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 12:52:48" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -206,7 +206,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 6, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 13:51:54' }
+    params = { "id": 6, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 13:51:54" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -240,7 +240,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 7, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 15:34:33' }
+    params = { "id": 7, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 15:34:33" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -274,7 +274,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 8, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-29 17:59:41' }
+    params = { "id": 8, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-29 17:59:41" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -308,7 +308,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 9, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 19:53:25' }
+    params = { "id": 9, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 19:53:25" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -342,7 +342,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 10, "type": 'PushEvent', "actor": { "id": 2, "login": 'nicole48', "avatar_url": 'https://avatars.com/nicole48' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-29 20:43:02' }
+    params = { "id": 10, "type": "PushEvent", "actor": { "id": 2, "login": "nicole48", "avatar_url": "https://avatars.com/nicole48" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-29 20:43:02" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -376,7 +376,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 11, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-30 02:17:08' }
+    params = { "id": 11, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-30 02:17:08" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -410,7 +410,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 12, "type": 'PushEvent', "actor": { "id": 3, "login": 'jade33', "avatar_url": 'https://avatars.com/jade33' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-30 18:59:20' }
+    params = { "id": 12, "type": "PushEvent", "actor": { "id": 3, "login": "jade33", "avatar_url": "https://avatars.com/jade33" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-30 18:59:20" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -444,7 +444,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 13, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-30 19:54:40' }
+    params = { "id": 13, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-30 19:54:40" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -478,7 +478,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 14, "type": 'PushEvent', "actor": { "id": 2, "login": 'nicole48', "avatar_url": 'https://avatars.com/nicole48' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-31 20:21:24' }
+    params = { "id": 14, "type": "PushEvent", "actor": { "id": 2, "login": "nicole48", "avatar_url": "https://avatars.com/nicole48" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-31 20:21:24" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -512,7 +512,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 15, "type": 'PushEvent', "actor": { "id": 3, "login": 'jade33', "avatar_url": 'https://avatars.com/jade33' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2019-01-01 03:46:48' }
+    params = { "id": 15, "type": "PushEvent", "actor": { "id": 3, "login": "jade33", "avatar_url": "https://avatars.com/jade33" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2019-01-01 03:46:48" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -546,7 +546,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 16, "type": 'PushEvent', "actor": { "id": 2, "login": 'nicole48', "avatar_url": 'https://avatars.com/nicole48' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2019-01-01 15:24:13' }
+    params = { "id": 16, "type": "PushEvent", "actor": { "id": 2, "login": "nicole48", "avatar_url": "https://avatars.com/nicole48" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2019-01-01 15:24:13" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -580,7 +580,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 17, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2019-01-01 15:24:13' }
+    params = { "id": 17, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2019-01-01 15:24:13" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -614,7 +614,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 18, "type": 'PushEvent', "actor": { "id": 4, "login": 'kbass', "avatar_url": 'https://avatars.com/kbass' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-01 16:57:48' }
+    params = { "id": 18, "type": "PushEvent", "actor": { "id": 4, "login": "kbass", "avatar_url": "https://avatars.com/kbass" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-01 16:57:48" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -648,7 +648,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 19, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-01 22:35:59' }
+    params = { "id": 19, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-01 22:35:59" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -682,7 +682,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 20, "type": 'PushEvent', "actor": { "id": 4, "login": 'kbass', "avatar_url": 'https://avatars.com/kbass' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-02 16:43:12' }
+    params = { "id": 20, "type": "PushEvent", "actor": { "id": 4, "login": "kbass", "avatar_url": "https://avatars.com/kbass" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-02 16:43:12" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -716,7 +716,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 21, "type": 'PushEvent', "actor": { "id": 4, "login": 'kbass', "avatar_url": 'https://avatars.com/kbass' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-03 13:37:04' }
+    params = { "id": 21, "type": "PushEvent", "actor": { "id": 4, "login": "kbass", "avatar_url": "https://avatars.com/kbass" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-03 13:37:04" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
 
@@ -750,7 +750,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 201
     # }
 
-    params = { "id": 22, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-03 13:37:04' }
+    params = { "id": 22, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-03 13:37:04" }
     post '/events', params, format: :json
     expect(response.status).to eq 201
   end
@@ -787,7 +787,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 400
     # }
 
-    params = { "id": 1, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 06:12:46' }
+    params = { "id": 1, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 06:12:46" }
     post '/events', params
     expect(response.status).to eq 400
   end
@@ -822,7 +822,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 200
     # }
 
-    resp = { "id": 1, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 06:12:46' }
+    resp = { "id": 1, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 06:12:46" }
     get '/events/1'
     expect(response.status).to eq 200
     expect(JSON.parse(response.body)).to eq resp.deep_stringify_keys
@@ -940,7 +940,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     ],
     #     "response_code": 200
     # }
-    resp = [ { "id": 1, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 06:12:46' }, { "id": 2, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-28 06:24:37' }, { "id": 6, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 13:51:54' }, { "id": 8, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-29 17:59:41' }, { "id": 13, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-30 19:54:40' } ]
+    resp = [ { "id": 1, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 06:12:46" }, { "id": 2, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-28 06:24:37" }, { "id": 6, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 13:51:54" }, { "id": 8, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-29 17:59:41" }, { "id": 13, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-30 19:54:40" } ]
     get '/events/actors/1'
     resp.each do |i|
       i.deep_stringify_keys!
@@ -1318,7 +1318,7 @@ RSpec.describe 'EventsControllerSpec', type: :request do
     #     "response_code": 200
     # }
 
-    resp = [ { "id": 1, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 06:12:46' }, { "id": 2, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-28 06:24:37' }, { "id": 3, "type": 'PushEvent', "actor": { "id": 3, "login": 'jade33', "avatar_url": 'https://avatars.com/jade33' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-28 22:31:59' }, { "id": 4, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 03:38:10' }, { "id": 5, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 12:52:48' }, { "id": 6, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 13:51:54' }, { "id": 7, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 15:34:33' }, { "id": 8, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-29 17:59:41' }, { "id": 9, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-29 19:53:25' }, { "id": 10, "type": 'PushEvent', "actor": { "id": 2, "login": 'nicole48', "avatar_url": 'https://avatars.com/nicole48' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-29 20:43:02' }, { "id": 11, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-30 02:17:08' }, { "id": 12, "type": 'PushEvent', "actor": { "id": 3, "login": 'jade33', "avatar_url": 'https://avatars.com/jade33' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-30 18:59:20' }, { "id": 13, "type": 'PushEvent', "actor": { "id": 1, "login": 'davidwright', "avatar_url": 'https://avatars.com/davidwright' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2018-12-30 19:54:40' }, { "id": 14, "type": 'PushEvent', "actor": { "id": 2, "login": 'nicole48', "avatar_url": 'https://avatars.com/nicole48' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2018-12-31 20:21:24' }, { "id": 15, "type": 'PushEvent', "actor": { "id": 3, "login": 'jade33', "avatar_url": 'https://avatars.com/jade33' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2019-01-01 03:46:48' }, { "id": 16, "type": 'PushEvent', "actor": { "id": 2, "login": 'nicole48', "avatar_url": 'https://avatars.com/nicole48' }, "repo": { "id": 2, "name": 'allen/facere', "url": 'https://github.com/allen/facere' }, "created_at": '2019-01-01 15:24:13' }, { "id": 17, "type": 'PushEvent', "actor": { "id": 6, "login": 'carolpatterson', "avatar_url": 'https://avatars.com/carolpatterson' }, "repo": { "id": 1, "name": 'smith/neque', "url": 'https://github.com/smith/neque' }, "created_at": '2019-01-01 15:24:13' }, { "id": 18, "type": 'PushEvent', "actor": { "id": 4, "login": 'kbass', "avatar_url": 'https://avatars.com/kbass' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-01 16:57:48' }, { "id": 19, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-01 22:35:59' }, { "id": 20, "type": 'PushEvent', "actor": { "id": 4, "login": 'kbass', "avatar_url": 'https://avatars.com/kbass' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-02 16:43:12' }, { "id": 21, "type": 'PushEvent', "actor": { "id": 4, "login": 'kbass', "avatar_url": 'https://avatars.com/kbass' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-03 13:37:04' }, { "id": 22, "type": 'PushEvent', "actor": { "id": 5, "login": 'christine20', "avatar_url": 'https://avatars.com/christine20' }, "repo": { "id": 3, "name": 'cochran/perspiciatis', "url": 'https://github.com/cochran/perspiciatis' }, "created_at": '2019-01-03 13:37:04' } ]
+    resp = [ { "id": 1, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 06:12:46" }, { "id": 2, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-28 06:24:37" }, { "id": 3, "type": "PushEvent", "actor": { "id": 3, "login": "jade33", "avatar_url": "https://avatars.com/jade33" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-28 22:31:59" }, { "id": 4, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 03:38:10" }, { "id": 5, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 12:52:48" }, { "id": 6, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 13:51:54" }, { "id": 7, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 15:34:33" }, { "id": 8, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-29 17:59:41" }, { "id": 9, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-29 19:53:25" }, { "id": 10, "type": "PushEvent", "actor": { "id": 2, "login": "nicole48", "avatar_url": "https://avatars.com/nicole48" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-29 20:43:02" }, { "id": 11, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-30 02:17:08" }, { "id": 12, "type": "PushEvent", "actor": { "id": 3, "login": "jade33", "avatar_url": "https://avatars.com/jade33" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-30 18:59:20" }, { "id": 13, "type": "PushEvent", "actor": { "id": 1, "login": "davidwright", "avatar_url": "https://avatars.com/davidwright" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2018-12-30 19:54:40" }, { "id": 14, "type": "PushEvent", "actor": { "id": 2, "login": "nicole48", "avatar_url": "https://avatars.com/nicole48" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2018-12-31 20:21:24" }, { "id": 15, "type": "PushEvent", "actor": { "id": 3, "login": "jade33", "avatar_url": "https://avatars.com/jade33" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2019-01-01 03:46:48" }, { "id": 16, "type": "PushEvent", "actor": { "id": 2, "login": "nicole48", "avatar_url": "https://avatars.com/nicole48" }, "repo": { "id": 2, "name": "allen/facere", "url": "https://github.com/allen/facere" }, "created_at": "2019-01-01 15:24:13" }, { "id": 17, "type": "PushEvent", "actor": { "id": 6, "login": "carolpatterson", "avatar_url": "https://avatars.com/carolpatterson" }, "repo": { "id": 1, "name": "smith/neque", "url": "https://github.com/smith/neque" }, "created_at": "2019-01-01 15:24:13" }, { "id": 18, "type": "PushEvent", "actor": { "id": 4, "login": "kbass", "avatar_url": "https://avatars.com/kbass" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-01 16:57:48" }, { "id": 19, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-01 22:35:59" }, { "id": 20, "type": "PushEvent", "actor": { "id": 4, "login": "kbass", "avatar_url": "https://avatars.com/kbass" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-02 16:43:12" }, { "id": 21, "type": "PushEvent", "actor": { "id": 4, "login": "kbass", "avatar_url": "https://avatars.com/kbass" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-03 13:37:04" }, { "id": 22, "type": "PushEvent", "actor": { "id": 5, "login": "christine20", "avatar_url": "https://avatars.com/christine20" }, "repo": { "id": 3, "name": "cochran/perspiciatis", "url": "https://github.com/cochran/perspiciatis" }, "created_at": "2019-01-03 13:37:04" } ]
     get '/events'
     expect(response.status).to eq 200
     resp.each do |i|
