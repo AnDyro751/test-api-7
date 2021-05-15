@@ -3,7 +3,7 @@ class ActorsController < ApplicationController
   before_action :set_event, only: [:update]
 
   def index
-    @actors = Actor.all
+    @actors = Actor.all.order(:events_count => :desc)
   end
 
   def update
