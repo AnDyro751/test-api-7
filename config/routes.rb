@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resources :events
-  namespace :events do
-    get '/actors/:id', to: 'actors#events_actors'
-  end
+  get 'events/actors/:id', to: 'actors#events_actors'
+  put '/actors', to: "actors#update"
 
   delete '/erase', to: 'events#erase_all'
   # The priority is based upon order of creation: first created -> highest priority.
